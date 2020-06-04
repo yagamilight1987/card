@@ -1,0 +1,134 @@
+:root {
+  --root-bg: #d5e4e4;
+  --white: #ffffff;
+  --primary: #191b26;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input,
+button,
+a,
+select {
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--root-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--white);
+  height: 600px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.image {
+  height: inherit;
+  width: inherit;
+}
+
+.content {
+  position: absolute;
+  left: 42%;
+  width: 54%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  color: var(--primary);
+  line-height: 34px;
+}
+
+.title {
+  flex: 0.25;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.description {
+  flex: 0.5;
+  font-size: 1.25rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: calc(50% - 2rem);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--white);
+  border: 1px solid #d6d5e4;
+  border-radius: 5px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button.active {
+  color: var(--white);
+  background: linear-gradient(to right, #10bab6 0%, #006d6f 100%);
+  box-shadow: 0 15px 25px rgba(0, 167, 147, 0.2);
+}
+
+.button .label {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.button .icon {
+  position: relative;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: rgba(0, 167, 147, 0.1);
+  border: 1px solid rgba(0, 167, 147, 0.15);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .icon::before {
+  content: "";
+  background: transparent;
+  border: 3px solid #00a793;
+  transform: rotate(45deg);
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.button.active .icon {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.button.active .icon::before {
+  border-color: var(--white);
+}

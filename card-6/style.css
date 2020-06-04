@@ -1,0 +1,138 @@
+:root {
+  --root-bg: linear-gradient(to right, #6e72d8 0%, #9991f4 100%);
+  --primary: #2c2760;
+  --secondary: #ada5ff;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+a,
+select {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  background: var(--root-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  height: 255px;
+  width: 982px;
+  display: flex;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 23px 49px #6961bd;
+}
+
+.course {
+  flex: 0.5;
+  background-color: var(--primary);
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+}
+
+.course .header {
+  text-transform: uppercase;
+  color: var(--secondary);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  flex: 1.5;
+}
+
+.course .title {
+  color: var(--white);
+  font-size: 1.8rem;
+  flex: 4;
+}
+
+.course .footer {
+  color: var(--secondary);
+  font-size: 1rem;
+  flex: 1;
+}
+
+.chapter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+}
+
+.chapter .header {
+  text-transform: uppercase;
+  color: #242e4c;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  flex: 1.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .number {
+  flex: 2;
+}
+
+.header .progress {
+  flex: 1;
+  text-transform: capitalize;
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.progress::before,
+.progress::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 5px;
+  background-color: #dddbf1;
+  border-radius: 3px;
+}
+
+.progress::after {
+  width: 60%;
+  background-color: var(--primary);
+}
+
+.chapter .title {
+  color: var(--primary);
+  font-size: 2rem;
+  flex: 4;
+}
+
+.chapter .button {
+  flex: 1;
+  background-color: var(--primary);
+  border-radius: 1.75rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  align-self: flex-end;
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 15px 20px rgba(71, 62, 166, 0.55);
+}

@@ -1,0 +1,186 @@
+:root {
+  --root-bg-start: rgba(89, 92, 99, 1);
+  --root-bg-end: rgba(33, 35, 41, 1);
+  --container-bg: #212329;
+  --text-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    var(--root-bg-start) 0%,
+    var(--root-bg-end) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
+  margin-right: 1rem;
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.date .month {
+  font-size: 1rem;
+}
+
+.date .day {
+  font-size: 2rem;
+}
+
+.details {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  padding: 2.5rem;
+  padding-right: 5rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  position: relative;
+}
+
+.details::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: var(--container-bg);
+  transform: rotate(45deg);
+  left: -10px;
+}
+
+.details .title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.details .schedule {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.details .meeting-info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.meeting-info button {
+  padding: 0.75rem 1.5rem;
+  background-color: #5aa2f7;
+  color: var(--text-color);
+  border-radius: 2rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 3rem;
+}
+
+.meeting-info span {
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
+.attendees ul {
+  list-style: none;
+}
+
+.attendees li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.attendees li.header {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.attendees li.item {
+  position: relative;
+  left: 2.25rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.attendees li.item::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #60646f;
+  left: -2.25rem;
+}
+
+li.item.yes::before {
+  background-color: #50e3c2;
+}
+
+li.item.maybe::before {
+  background-color: #fcb045;
+}
+
+li.item.no::before {
+  background-color: #fc466b;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+
+  .date {
+      margin-right: 0;
+      margin-bottom: 2rem;
+  }
+
+  .event-detail {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .details::before { 
+    top: -10px;
+    left: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
+}
