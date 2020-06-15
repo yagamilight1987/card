@@ -6,16 +6,8 @@
   "scripts": {
     "build:css": "postcss ./tailwind/tailwind.css -o ./tailwind/styles.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://2e37912384a66d1f0c58bf4fea980c743f914127@github.com/yagamilight1987/card.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yagamilight1987/card/issues"
-  },
-  "homepage": "https://github.com/yagamilight1987/card#readme",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "postcss-cli": "^7.1.1",
